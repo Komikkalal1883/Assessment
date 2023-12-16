@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    background-color: rgb(167, 228, 233);
+}
+h1{
+    margin-left: 65px;
+}
+.Main-box01{
+    padding: 10px;
+    font-size: larger;
+    margin: 0 auto;
+    height: 150px;
+    width: 32.4cm;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    gap: 50px;
+}
+.box01 >p{
+ width: 45%;
+ padding-top: 25px;
+}
+.box2{
+    color: red;
+    padding: 45px;
+}
+.box3{
+    margin-left: 60px;
+    margin-top: 53px;
+}
+#color{
+    color: rgb(28, 215, 240);
+}
+.Main-box02{
+    background-color: white;
+    margin: 35px auto;
+    width: 32.4cm;
+    height: 350px;
+    border: 1px solid black;
+}
+.input01{
+    width: 50%;
+}
+#name01{
+    margin: 15px;
+    font-size: larger;
+    height: 40px;
+    width: 250px;
+}
+#name02{
+    margin-left: 15px;
+    font-size: larger;
+    height: 150px;
+    width: 535px;
+}
+button{
+    color: white;
+    position: relative;
+    bottom: -15px;
+    left: 15px;
+    background-color: brown;
+    height: 30px;
+    width: 100px;
+}
+.flex02{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input02{
+    margin-top: 15px;
+}
+.inner{
+    cursor: pointer;
+    gap: 20px;
+    margin-top: 20px;
+    display: flex;
+}
