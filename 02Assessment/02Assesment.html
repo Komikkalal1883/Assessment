@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assesment</title>
+    <script src="../../jQuery/main/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: seagreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 20px;
+      }
+      h1 {
+        text-decoration: underline #ffff;
+      }
+      input {
+        height: 30px;
+        width: 300px;
+      }
+      .container {
+        background: #ffff;
+        padding: 20px 30px;
+        width: 500px;
+        text-align: center;
+      }
+      .indicate {
+        width: 100%;
+        height: 10px;
+        background: gray;
+        border-radius: 5px;
+        margin: 10px 0 20px 0;
+        border: 1px solid violet;
+        display: flex;
+        align-items: center;
+      }
+      .indicate span {
+        height: 10px;
+        width: 35%;
+        border-radius: 5px;
+      }
+      .low {
+        background: brown;
+      }
+      .meduim{
+        background: orange;
+      }
+      .strong {
+        background: rgb(27, 233, 27);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>jQuery Password Checker</h1>
+      <div class="main">
+        <input
+          type="text"
+          name=""
+          placeholder="Enter Password Here...."
+          id=""
+        />
+        <div class="indicate">
+          <span class="span1"></span><span class="span2"></span
+          ><span class="span3"></span>
+        </div>
+        <p>Week</p>
+      </div>
+    </div>
+    <script>
+      $(() => {
+        var number = /(0-9)/;
+        var alphabets = /(a-zA-Z)/;
+        var special_charecter = /([!,@,^,$,&,*,?,<,#])/;
+        $("input").keyup(() => {
+          var countText = $("input").val().length;
+          console.log(countText);
+          if (countText > 0 && countText < 20) {
+            $(".span1").addClass("low");
+            $("p").html("Your Password is too Week");
+          } else {
+            $(".span1").removeClass("low");
+          }
+          if ($('input').val().match(alphabets) && $('input').val().match(number)) {
+            $("span2").addClass("meduim");
+            $("p").html("Your Password is too meduim");
+          } else {
+            $(".span2").removeClass("meduim");
+          }
+          if ($('input').val().match(alphabets)&& $('input').val().match(number)&& $('input').val().match(special_charecter)) {
+            $("span3").addClass("strong");
+            $("p").html("Your Password is very strong");
+          } else {
+            $(".span3").removeClass("strong");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
