@@ -51,7 +51,7 @@
       .low {
         background: brown;
       }
-      .meduim{
+      .meduim {
         background: orange;
       }
       .strong {
@@ -86,17 +86,24 @@
           console.log(countText);
           if (countText > 0 && countText < 20) {
             $(".span1").addClass("low");
-            $("p").html("Your Password is too Week");
+            $("p").html("Your Password is to Week");
           } else {
             $(".span1").removeClass("low");
           }
-          if ($('input').val().match(alphabets) && $('input').val().match(number)) {
+          if (
+            $("input").val().match(alphabets) &&
+            $("input").val().match(number)
+          ) {
             $("span2").addClass("meduim");
             $("p").html("Your Password is too meduim");
           } else {
             $(".span2").removeClass("meduim");
           }
-          if ($('input').val().match(alphabets)&& $('input').val().match(number)&& $('input').val().match(special_charecter)) {
+          if (
+            $("input").val().match(alphabets) &&
+            $("input").val().match(number) &&
+            $("input").val().match(special_charecter)
+          ) {
             $("span3").addClass("strong");
             $("p").html("Your Password is very strong");
           } else {
